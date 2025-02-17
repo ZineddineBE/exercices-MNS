@@ -1,0 +1,72 @@
+body{
+    margin: 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: #303030;
+}
+
+header{
+    display: flex;
+    background-color: #40d6b0;
+    flex: wrap;
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box;
+    height: 50px;
+    padding: 0px 10px;
+}
+
+header img{
+    vertical-align: middle;
+    width: 50px;
+}
+
+nav{
+    position: absolute;
+    left: -160px;
+    transition: all 0.5s;
+    background-color: #73380A;
+    height: calc(100% - 50px);
+    font-weight: 600;
+}
+
+nav:hover{
+    left: 0px;
+    transition: all 0.5s;
+}
+
+nav>ul{
+    text-align: right;
+}
+
+nav ul li{
+    list-style-type: none;
+    padding: 20px 0px;
+    border-bottom: 1px solid;
+}
+
+nav ul li a i{
+    padding: 0px 25px;
+}
+
+nav a{
+    text-decoration: none;
+    color: #40d6b0;
+}
+
+main{
+    padding: 0px 100px;
+}
+
+main .container{
+    width: 1700px;
+}
+
+main .container table, td, th{
+    border: 1px solid black;
+    border-collapse: collapse;
+    padding: 10px;
+}
+
+main .container table td{
+    padding-right: 25px;
+}

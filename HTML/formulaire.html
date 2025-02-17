@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulaire</title>
+</head>
+<body>
+
+    <form action="traitement.php" method="post">
+        
+    <label for="prenom">Votre prénom</label> <!-- Le for du label et l'id de l'input doivent être les mêmes (pour l'accessibilité) -->
+        <input type="text" name="firstname" id="prenom">
+
+        <label for="nom">Votre nom</label>
+        <input type="text" name="name" id="nom">
+
+        <label for="email">Votre e-mail</label>
+        <input type="mail" name="mail" id="email">
+
+        <label for="date-naissance">Votre date de naissance</label>
+        <input type="date" name="date" id="date-naissance">
+
+        <input type="submit" value="OK">
+    </form>
+
+    
+</body>
+</html>

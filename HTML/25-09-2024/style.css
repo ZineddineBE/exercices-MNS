@@ -1,0 +1,52 @@
+ul{
+    background-color: red;
+    list-style-type: none;
+    padding-left: 0; /* enlever l'espace des puces */
+    text-align: center;
+    
+}
+
+li {
+    background-color: yellow;
+    display: inline;
+    margin: 0 10px;
+    padding: 10px 20px 10px 20px;
+    /* padding: 50px; Haut/bas gauche/droite | Pareil que 10px 20px 10px 20px */
+}
+
+a{
+    background-color: pink;
+    padding: 50px;
+    display: inline-block;
+    text-decoration: none;
+    color: rgb(49, 49, 49);
+}
+
+a:hover{
+    background-color: blueviolet;
+}
+
+
+img{
+    width: 300px;
+    float: left;
+    margin-right: 10px;
+}
+
+p{
+    background-color: goldenrod;
+}
+
+.clear{
+    clear: both;
+}
+
+div:not(.clear){
+    border: 1px solid rgb(0, 162, 14);
+}
+
+@media (max-width: 1000px){
+    p{
+        width: 100%;
+    }
+}

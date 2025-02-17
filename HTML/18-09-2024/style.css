@@ -1,0 +1,45 @@
+h1, h2{
+    color: red;
+}
+
+p{
+    color: orangered;
+    border: 1px solid orangered;
+}
+
+.test{
+    color: rgb(238, 3, 238);
+}
+
+#toto{
+    font-style: italic;
+}
+
+li{
+    color: green;
+}
+
+ul li ul li{
+    color: yellow;
+}
+
+.testDiv p{
+    color: rgb(255, 187, 0);
+}
+
+a{
+    color: brown;
+}
+
+a:visited{
+    color: blue;
+}
+
+a:hover{
+    color: gray;
+}
+
+
+a:focus{
+    border: 1px dotted black;
+}
