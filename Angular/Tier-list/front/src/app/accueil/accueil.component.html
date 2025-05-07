@@ -1,0 +1,44 @@
+
+<div class="ligne px-2">
+    <label>URL Image</label>
+    <input [(ngModel)]="urlImageSaisie" placeholder="https://url-image.com">
+    <select [(ngModel)]="categorieSelectionnee">
+        @for(categorie of categories; track $index){
+            <option value="{{categorie.id}}"> {{categorie.titre}}</option>
+        }
+    </select>
+    <div class="bouton" (click)="onClicAjouterImage()">Ajouter image</div>
+</div>
+
+<div class="ligne px-2">
+    <label>Nouvelle catégorie</label>
+    <input [(ngModel)]="nomNouvelleCategorie" placeholder="ex : F">
+    <div class="bouton" (click)="onClicAjouterCategorie()">Ajouter catégorie</div>
+</div>
+
+
+
+<div class="categories">
+    @for(categorie of categories; track indexCategorie; let indexCategorie = $index; let countCategorie = $count){
+        <div class="categorie">
+            <div class="en-tete">
+                <div class="bouton bouton-supprimer" (click)="supprimerCategorie(categorie.id)">❌</div>
+                <span>{{categorie.titre}}</span>
+            </div>
+
+            @for(image of categorie.images; track indexImage; let indexImage = $index){
+                <div class="image">
+                    @if(indexCategorie !== 0){
+                        <div class="bouton bouton-plus" (click)="deplacerImage(categories[indexCategorie -1].id, image.id)">➕</div>
+                    }
+                    @if(indexCategorie !== countCategorie-1){
+                        <div class="bouton bouton-moins" (click)="deplacerImage(categories[indexCategorie +1].id, image.id)">➖</div>
+                    }
+                    <div class="bouton bouton-supprimer" (click)="supprimerImage(image.id)">❌</div>
+                    <img src="{{image.url}}" alt="image de l'animé {{image}}">
+                </div>
+            }
+
+        </div>
+    }
+</div>

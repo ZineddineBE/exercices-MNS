@@ -1,0 +1,30 @@
+<h1 class="text-center my-3">Inscription</h1>
+
+<form (ngSubmit)="onInscription()" [formGroup]="formulaire" class="container global">
+    <mat-form-field>
+        <mat-label>Adresse mail</mat-label>
+        <input matInput placeholder="Ex. email@mail.com" formControlName="email">
+        @if(formulaire.get('email')?.hasError('required')){
+            <mat-error>L'email est obligatoire</mat-error>
+        } @else if (formulaire.get('email')?.hasError('email')) {
+            <mat-error>Adresse e-mail invalide. Veuillez utiliser un format valide comme exemple&#64;mail.com.</mat-error>
+        }
+    </mat-form-field>
+
+    <mat-form-field>
+        <mat-label>Mot de passe</mat-label>
+        <input type="password" matInput formControlName="password">
+            <mat-error>Le mot de passe est obligatoire</mat-error>
+    </mat-form-field>
+
+    <mat-form-field>
+        <mat-label>Confirmer le mot de passe</mat-label>
+        <input type="password" matInput formControlName="confirmPassword" />
+        <mat-error>La confirmation du mot de passe est obligatoire</mat-error>
+    </mat-form-field>
+
+    <button mat-flat-button class="mt-3">S'inscrire</button>
+
+</form>
+
+

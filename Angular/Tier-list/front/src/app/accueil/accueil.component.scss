@@ -1,0 +1,146 @@
+.ligne{
+    display: flex;
+    margin: 1em 0;
+    gap: 1em;
+    align-items: center;
+
+    .bouton {
+        background-color: royalblue;
+        color: white;
+        padding: 0.5em;
+        border-radius: 5px;
+        user-select: none;
+        cursor: pointer;
+        width: fit-content;
+    
+        &:hover {
+            background-color: rgb(73, 106, 206);
+        }
+    }
+}
+
+input{
+    min-width: 300px;
+    max-width: 600px;
+    width: 100%;
+}
+
+
+
+.categories{
+
+    :nth-child(1) .en-tete {
+        background-color: #ff7f7e;
+    }
+
+    :nth-child(2) .en-tete {
+        background-color: #ffbf7f;
+    }
+
+    :nth-child(3) .en-tete {
+        background-color: #ffdf80;
+    }
+
+    :nth-child(4) .en-tete {
+        background-color: #feff7f;
+    }
+
+    :nth-child(5) .en-tete {
+        background-color: #beff7f;
+    }
+
+    :nth-child(6) .en-tete {
+        background-color: #798ae7;
+    }
+
+    .en-tete {
+        background-color: #a775ee;
+    }
+
+    .categorie {
+        display: flex;
+
+        .bouton {
+            opacity: 0;
+            border-radius: 30px;
+            position: absolute;
+            user-select: none;
+            cursor: pointer;
+        
+            &.bouton-plus {
+                border: 2px solid blue;
+                background-color: rgba(0, 0, 255);
+                right: 3px;
+                top: 3px;
+        
+                &:hover {
+                    background-color: rgb(0, 0, 216);
+                }
+            }
+        
+            &.bouton-moins {
+                border: 2px solid green;
+                background-color: rgba(0, 128, 0);
+                bottom: 3px;
+                right: 3px;
+        
+                &:hover {
+                    background-color: rgb(0, 96, 0);
+                }
+            }
+        
+            &.bouton-supprimer {
+                border: 2px solid red;
+                background-color: rgba(255, 0, 0);
+                bottom: 3px;
+                left: 3px;
+        
+                &:hover {
+                    background-color: rgb(220, 0, 0);
+                    ;
+                }
+            }
+        }
+    
+        .en-tete {
+            width: 100px;
+            height: 125px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 25px;
+            
+            .bouton{
+                font-size: 15px;
+            }
+        }
+    
+        .image,
+        .en-tete {
+            border: 1px solid black;
+            position: relative;
+
+            &:hover .bouton{
+                opacity: 1;
+                transition: opacity 0.25s ease-in-out;
+            }
+        }
+
+        .image{
+            width: 125px;
+            height: 125px;
+
+            img{
+                width: inherit;
+                height: inherit;
+                object-fit: cover;
+            }
+
+        }
+
+    }
+
+
+}
+

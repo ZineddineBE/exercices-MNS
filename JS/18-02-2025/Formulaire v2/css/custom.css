@@ -1,0 +1,83 @@
+/* Applique box-sizing à tous les éléments */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.form-container {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    width: 100%; /* largeur à 100% pour s'ajuster à la taille de la fenêtre */
+    max-width: 400px; /* largeur maximale pour le conteneur */
+}
+
+.form-container h2 {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.form-container input[type="submit"] {
+    margin-top: 20px;
+    padding : 10px 15px;
+    background-color: royalblue;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.form-container input[type="submit"]:hover {
+    background-color: rgb(52, 89, 201);
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.form-group a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.form-group a:hover {
+    text-decoration: underline;
+}
+
+.warning-message {
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+.error{
+    color : red;
+}
+
+.error input, .error textarea{
+    border-color:red;
+    box-shadow: rgba(230, 28, 28, 0.48) 3px 2px 8px 0px, rgba(255, 78, 78, 0.8) -3px -2px 8px 0px;
+}
